@@ -452,5 +452,27 @@
       "D9ZtsRRolKA"
     ],
     "youtube_pending": []
+  },
+  "2921027524": {
+    "attempts": 0,
+    "drive_folder": "2026-11-06_2921027524",
+    "failed_items": [],
+    "files": [
+      "topic_04.mp4",
+      "topic_07.mp4",
+      "topic_08.mp4",
+      "topic_02.mp4"
+    ],
+    "processed_at": "2026-11-07T11:51:18.006728+09:00",
+    "status": "done",
+    "title": "２０時からBLEACH Rebirth of Souls 実況５日目 ※ネタバレあり",
+    "youtube_ids": [
+      "oBpyJ4qz9vA"
+    ],
+    "youtube_pending": [
+      "topic_07.mp4",
+      "topic_08.mp4",
+      "topic_02.mp4"
+    ]
   }
 }
