@@ -84,9 +84,10 @@ FINAL_SCHEMA = {
                     },
                     "description": {"type": "string"},
                     "quality": {"type": "integer"},
+                    "chatting": {"type": "boolean"},
                 },
                 "required": ["topic_id", "in_sec", "out_sec", "title", "thumb_text", "thumb_emph", "thumb_sec", "face",
-                             "chapters", "description", "quality"],
+                             "chapters", "description", "quality", "chatting"],
                 "additionalProperties": False,
             },
         }
@@ -293,7 +294,8 @@ def normalize_video(raw: dict, d: TopicDraft, video: VideoInfo) -> TopicVideo:
         thumb_text=truncate_display(str(raw.get("thumb_text", "")).strip(), 16), thumb_sec=round(ts, 2),
         face=face, chapters=tuple(chapters), description=str(raw.get("description", "")).strip(),
         bubbles=tuple(truncate_display(str(x).strip(), 9) for x in (raw.get("bubbles") or [])[:2] if str(x).strip()),
-        quality=int(raw.get("quality", d.quality)), game=video.game_at(a),
+        quality=int(raw.get("quality", d.quality)),
+        game="雑談" if raw.get("chatting") is True else video.game_at(a),   # 2026-11-07 オーナー判断
         thumb_emph=str(raw.get("thumb_emph", "")).strip(),
     )
 

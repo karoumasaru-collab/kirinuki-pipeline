@@ -190,3 +190,12 @@ def test_parse_extra():
     from kirinuki.pipeline2 import parse_extra
     x = parse_extra("1:03:30-1:07:45|題名|サムネ|一言")
     assert x == [{"in_sec": 3810, "out_sec": 4065, "title": "題名", "thumb_text": "サムネ", "description": "一言"}]
+
+
+def test_normalize_final_chatting_label():
+    drafts = [TopicDraft(1, 1000, 1600, "B", 6)]
+    raw = {"topic_id": 1, "in_sec": 1000, "out_sec": 1600, "title": "B【2026/10/28】", "thumb_text": "x",
+           "thumb_sec": 1100, "face": {"fx": 0, "fy": 0, "fsize": 0}, "chapters": [], "description": "",
+           "bubbles": [], "quality": 6}
+    assert normalize_final({"videos": [{**raw, "chatting": True}]}, drafts, V)[0].game == "雑談"
+    assert normalize_final({"videos": [{**raw, "chatting": False}]}, drafts, V)[0].game == "ARC Raiders"
