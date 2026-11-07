@@ -27,8 +27,12 @@ jobs:
         run: |
           python - <<'PY'
           from kirinuki import publish_youtube as yt
+          import sys
           t = yt.access_token(yt.Credentials.from_env())
-          ch = yt._api(t, "GET", "channels?part=statistics,contentDetails&mine=true")["items"][0]
+          try:
+              ch = yt._api(t, "GET", "channels?part=statistics,contentDetails&mine=true")["items"][0]
+          except Exception as e:  # noqa: BLE001
+              sys.exit(f"== チャンネルの数字を取れない：{yt.http_error_text(e)}")
           s = ch["statistics"]
           print(f"== チャンネル：登録者 {s.get('subscriberCount')}人・総再生 {s.get('viewCount')}回・動画 {s.get('videoCount')}本")
           up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
