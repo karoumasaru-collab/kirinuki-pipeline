@@ -394,9 +394,10 @@
       "topic_03.mp4",
       "topic_05.mp4",
       "topic_04.mp4",
-      "topic_06.mp4"
+      "topic_06.mp4",
+      "topic_07.mp4"
     ],
-    "processed_at": "2026-11-06T12:07:00.997537+09:00",
+    "processed_at": "2026-11-07T11:55:01.075376+09:00",
     "status": "done",
     "title": "ARCレイダースをばんかいする",
     "youtube_dropped": [
@@ -428,7 +429,9 @@
       "luIJbgIUSIk",
       "R4vUJNCMSTQ"
     ],
-    "youtube_pending": []
+    "youtube_pending": [
+      "topic_07.mp4"
+    ]
   },
   "2919223663": {
     "attempts": 0,
