@@ -37,6 +37,10 @@ on:
         description: "足し算：取りやめる上げ直し待ち（例 shorts/short_01.mp4）"
         required: false
         default: ""
+      extra:
+        description: "足し算：区間を手で決めた話題。開始-終了|タイトル|サムネの言葉|概要欄の一言（; 区切りで複数）"
+        required: false
+        default: ""
 
 # GitHubは同じグループの順番待ちを1つしか持てず、古い順番待ちは取り消される。
 # 自動処理（通知・定期・VOD指定なし）は1つのグループ、VODを指定した手動実行はVODごとのグループに分ける。
@@ -53,7 +57,7 @@ env:
   # RCLONE_ で始まる環境変数は rclone が自分のオプションとして読むので、別名にする
   TOOL_RCLONE_VERSION: "v1.75.2"
   # 自動処理（VOD指定なし）は常に YouTube に上げる。手動でVODを指定したときは入力で決める
-  UPLOAD_YOUTUBE: ${{ (inputs.vod_id == '' || inputs.vod_id == null || inputs.youtube || inputs.add != '' || inputs.drop != '') && 'true' || 'false' }}
+  UPLOAD_YOUTUBE: ${{ (inputs.vod_id == '' || inputs.vod_id == null || inputs.youtube || inputs.add != '' || inputs.drop != '' || inputs.extra != '') && 'true' || 'false' }}
 
 jobs:
   plan:
@@ -114,11 +118,12 @@ jobs:
           KIRINUKI_PREFER_GAME: ${{ inputs.prefer_game }}
           ADD: ${{ inputs.add }}
           DROP: ${{ inputs.drop }}
+          EXTRA: ${{ inputs.extra }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: |
-          if [ -n "$ADD$DROP" ]; then python -m kirinuki plan --vod-id "$VOD_ID" --add "$ADD" --drop "$DROP"
+          if [ -n "$ADD$DROP$EXTRA" ]; then python -m kirinuki plan --vod-id "$VOD_ID" --add "$ADD" --drop "$DROP" --extra "$EXTRA"
           elif [ -n "$VOD_ID" ]; then python -m kirinuki plan --vod-id "$VOD_ID"; else python -m kirinuki plan; fi
       - name: 計画を次の段に渡す
         if: steps.plan.outputs.has_work == 'true'

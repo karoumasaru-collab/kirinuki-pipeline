@@ -161,3 +161,32 @@ def test_max_length_shorter_for_avoid():
     assert max_length(arc, o) == 1200
     assert max_length(algs, o) == 3600
     assert max_length(SimpleNamespace(title="雑談", game="Just Chatting"), o) == 1500
+
+
+def _tv(out_sec):
+    from kirinuki.topics import TopicVideo
+    return TopicVideo(topic_id=1, in_sec=0, out_sec=out_sec, title="t", thumb_text="t", thumb_sec=10,
+                      face=None, chapters=((0, "冒頭"),), description="")
+
+
+def test_extend_end_after_laugh():
+    from kirinuki.topics import extend_end
+    secs = [i * 3.0 for i in range(2000)]                 # ふだんは30秒に10件
+    secs += [3960 + i * 0.5 for i in range(60)]           # 終わり（3900秒）の1分後に盛り上がり
+    v = extend_end(_tv(3900), secs, 6000)
+    assert 3990 <= v.out_sec <= 3900 + 180
+
+
+def test_extend_end_quiet_and_cap():
+    from kirinuki.topics import extend_end
+    secs = [i * 3.0 for i in range(2000)]
+    assert extend_end(_tv(3900), secs, 6000).out_sec == 3900
+    secs2 = secs + [3800 + i * 0.3 for i in range(2000)]  # 盛り上がりがずっと続いても3分まで
+    assert extend_end(_tv(3900), secs2, 6000).out_sec == 3900 + 180
+    assert extend_end(_tv(3900), secs2, 6000, [(3950, 4100)]).out_sec == 3950
+
+
+def test_parse_extra():
+    from kirinuki.pipeline2 import parse_extra
+    x = parse_extra("1:03:30-1:07:45|題名|サムネ|一言")
+    assert x == [{"in_sec": 3810, "out_sec": 4065, "title": "題名", "thumb_text": "サムネ", "description": "一言"}]

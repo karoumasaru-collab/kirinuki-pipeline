@@ -234,6 +234,13 @@ def plan(vod_id: str, cfg: Config, workdir: Path) -> dict:
     # 長すぎる話題は、山場の多い区間に切り詰める（2026-11-02 オーナー判断：95分・100分の回は長すぎる。ARC は20分まで）
     scores = [(c.peak_sec, c.score) for c in cands]
     vids = [topics.cap_length(v, scores, topics.max_length(v, o)) for v in vids]
+    # オチの手前で切れないように、終わりの前後に盛り上がりがあれば延ばす（2026-11-07 オーナー判断）
+    secs = [m.offset_sec for m in chat.messages]
+    longer = [topics.extend_end(v, secs, chat.video.length_sec, muted or []) for v in vids]
+    for v, w in zip(vids, longer):
+        if w.out_sec != v.out_sec:
+            log(f"話題{v.topic_id}: 終わりに盛り上がりがあるので {hms(v.out_sec)} → {hms(w.out_sec)} に延ばす")
+    vids = longer
 
     # タイトルの点検（Claude③）：意味が通らない・中身と合わないタイトルを直す
     if has_key and vids and topics.CHECK_PROMPT.exists():
@@ -294,7 +301,34 @@ def live_now(cfg: Config) -> bool:
 
 # ---------- 足し算（作った動画はそのままで、話題を足す・取りやめる） ----------
 
-def add_plan(vod_id: str, cfg: Config, workdir: Path, add_ids: list[int], drop: list[str], st: dict) -> dict:
+def parse_extra(spec: str) -> list[dict]:
+    """手で決めた区間の話題。「開始-終了|タイトル|サムネの言葉|概要欄の一言」を「;」区切りで（時刻は 1:03:30 か秒）。"""
+    def sec(x: str) -> float:
+        p = [float(y) for y in x.strip().split(":")]
+        return sum(v * 60 ** k for k, v in enumerate(reversed(p)))
+    out = []
+    for one in (s for s in spec.split(";") if s.strip()):
+        rng, title, thumb, desc = (one.split("|") + ["", "", ""])[:4]
+        a, b = (sec(x) for x in rng.split("-"))
+        if not title.strip() or b <= a:
+            raise RuntimeError(f"手で決めた区間の書き方が違う：{one}")
+        out.append({"in_sec": a, "out_sec": b, "title": title.strip(), "thumb_text": thumb.strip() or title.strip()[:12],
+                    "description": desc.strip()})
+    return out
+
+
+def extra_topic(new_id: int, x: dict, like: topics.TopicVideo, scores: list[tuple[float, float]]) -> topics.TopicVideo:
+    """手で決めた区間の話題。顔の位置・ゲーム名は同じ配信の話題から借りる。サムネは区間でいちばんの山場。"""
+    inside = [(t, s) for t, s in scores if x["in_sec"] <= t < x["out_sec"]]
+    ts = max(inside, key=lambda p: p[1])[0] if inside else (x["in_sec"] + x["out_sec"]) / 2
+    return topics.TopicVideo(topic_id=new_id, in_sec=x["in_sec"], out_sec=x["out_sec"], title=x["title"],
+                             thumb_text=x["thumb_text"], thumb_sec=ts, face=like.face,
+                             chapters=((x["in_sec"], "冒頭"),), description=x.get("description", ""),
+                             quality=like.quality, game=like.game)
+
+
+def add_plan(vod_id: str, cfg: Config, workdir: Path, add_ids: list[int], drop: list[str], st: dict,
+             extra: list[dict] = ()) -> dict:
     """前回の記録（ドライブの metadata.json）から、足す話題だけの計画を作る。Claude は呼ばない。"""
     entry = st.get(vod_id) or {}
     if not entry.get("drive_folder"):
@@ -320,6 +354,15 @@ def add_plan(vod_id: str, cfg: Config, workdir: Path, add_ids: list[int], drop: 
         items.append({"id": f"topic_{i:02d}", "kind": "topic", "quality": t.get("quality", 0), "video": t,
                       "youtube": False})   # 上げるのは枠を見て上げ直しの仕組みで
         log(f"足す：topic_{i:02d}「{t['title']}」")
+    next_id = max([*by_id, *(int(r["file"][6:8]) for r in meta.get("results", [])
+                              if str(r.get("file", "")).startswith("topic_"))]) + 1
+    for k, x in enumerate(extra):
+        like = by_id[min(by_id, key=lambda i: min(abs(by_id[i]["in_sec"] - x["in_sec"]),
+                                                  abs(by_id[i]["out_sec"] - x["in_sec"])))]
+        t = asdict(extra_topic(next_id + k, x, topic_from(like), scores))
+        items.append({"id": f"topic_{next_id + k:02d}", "kind": "topic", "quality": t["quality"], "video": t,
+                      "youtube": False})
+        log(f"足す（区間を指定）：topic_{next_id + k:02d} {hms(x['in_sec'])}〜{hms(x['out_sec'])}「{t['title']}」")
     for f in drop:
         log(f"取りやめる：{f}")
     if not (work / "chat.json").exists():

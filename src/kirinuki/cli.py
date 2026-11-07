@@ -49,6 +49,7 @@ def main(argv: list[str] | None = None) -> int:
     pl.add_argument("--workdir", type=Path, default=Path("work"))
     pl.add_argument("--add", default="", help="足し算：作った動画はそのままで足す話題の番号（例 4,5）")
     pl.add_argument("--drop", default="", help="足し算：取りやめる上げ直し待ち（例 shorts/short_01.mp4）")
+    pl.add_argument("--extra", default="", help="足し算：区間を手で決めた話題（開始-終了|タイトル|サムネの言葉 を ; 区切り）")
     ri = sub.add_parser("render-item", help="第2版：計画の動画1本を書き出す")
     ri.add_argument("--vod-id", type=vod_id_arg, required=True)
     ri.add_argument("--item", required=True)
@@ -99,8 +100,8 @@ def main(argv: list[str] | None = None) -> int:
     elif args.cmd == "auto":
         return run_auto(cfg)
     elif args.cmd == "plan":
-        if args.add or args.drop:
-            return run_add(cfg, args.vod_id, args.workdir, args.add, args.drop)
+        if args.add or args.drop or args.extra:
+            return run_add(cfg, args.vod_id, args.workdir, args.add, args.drop, args.extra)
         return run_plan(cfg, args.vod_id, args.workdir)
     elif args.cmd == "render-item":
         from kirinuki import pipeline2
@@ -193,13 +194,13 @@ def run_plan(cfg, vod_id: str | None, workdir: Path) -> int:
     return 0
 
 
-def run_add(cfg, vod_id: str | None, workdir: Path, add: str, drop: str) -> int:
+def run_add(cfg, vod_id: str | None, workdir: Path, add: str, drop: str, extra: str = "") -> int:
     from kirinuki import pipeline2, state
     if vod_id is None:
         raise SystemExit("足し算には --vod-id が要る")
     ids = [int(x) for x in add.replace("、", ",").split(",") if x.strip()]
     drops = [x.strip() for x in drop.replace("、", ",").split(",") if x.strip()]
-    p = pipeline2.add_plan(vod_id, cfg, workdir, ids, drops, state.load())
+    p = pipeline2.add_plan(vod_id, cfg, workdir, ids, drops, state.load(), pipeline2.parse_extra(extra))
     github_output(has_work="true", vod_id=vod_id, items=json.dumps([i["id"] for i in p["items"]]), more="0")
     return 0
 

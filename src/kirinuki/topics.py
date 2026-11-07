@@ -379,6 +379,40 @@ def cap_length(v: TopicVideo, peak_scores: list[tuple[float, float]], max_sec: f
     return replace(v, in_sec=round(a, 2), out_sec=round(b, 2), chapters=tuple(chapters), thumb_sec=round(ts, 2))
 
 
+EXTEND_LOOK_SEC = 120.0   # 終わりの前後これだけの間に盛り上がりがあれば延ばす
+EXTEND_MAX_SEC = 180.0    # 延ばすのは最大3分（2026-11-07 オーナー判断）
+EXTEND_BIN_SEC = 30.0
+EXTEND_SURGE = 1.4        # 30秒ごとのチャット数が、配信全体の中央値のこの倍以上なら盛り上がり
+
+
+def extend_end(v: TopicVideo, msg_secs: list[float], length_sec: float,
+               muted: list[tuple[float, float]] = ()) -> TopicVideo:
+    """終わりの前後2分以内にチャットの盛り上がりがあれば、落ち着くところまで終わりを延ばす（最大3分。オチの手前で切れないように）。"""
+    if not msg_secs or length_sec <= 0:
+        return v
+    n = int(length_sec // EXTEND_BIN_SEC) + 1
+    bins = [0] * n
+    for t in msg_secs:
+        if 0 <= t < length_sec:
+            bins[int(t // EXTEND_BIN_SEC)] += 1
+    base = sorted(bins)[n // 2] or 1
+    surge = lambda i: 0 <= i < n and bins[i] >= EXTEND_SURGE * base
+    lo, hi = int((v.out_sec - EXTEND_LOOK_SEC) // EXTEND_BIN_SEC), int((v.out_sec + EXTEND_LOOK_SEC) // EXTEND_BIN_SEC)
+    hot = [i for i in range(lo, hi + 1) if surge(i)]
+    if not hot:
+        return v
+    i = hot[-1] + 1
+    while surge(i):    # 盛り上がりが続く間は延ばす
+        i += 1
+    end = min(i * EXTEND_BIN_SEC + 15, v.out_sec + EXTEND_MAX_SEC, length_sec)
+    for a, _ in muted:   # 音の消えた区間には入らない
+        if v.out_sec <= a < end:
+            end = a
+    if end <= v.out_sec:
+        return v
+    return replace(v, out_sec=round(end, 2))
+
+
 # ---------- タイトルの点検（Claude③） ----------
 
 CHECK_SCHEMA = {
