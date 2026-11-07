@@ -96,7 +96,7 @@ jobs:
         run: pytest -q
       # 足し算は前回の記録（metadata.json）をドライブから読む
       - name: rclone の設定（足し算のときだけ）
-        if: inputs.add != '' || inputs.drop != ''
+        if: inputs.add != '' || inputs.drop != '' || inputs.extra != ''
         env:
           RCLONE_CONFIG_TEXT: ${{ secrets.RCLONE_CONFIG }}
         run: |
