@@ -1,0 +1,51 @@
+name: stats
+
+# チャンネルの数字を見る：登録者数・総再生と、上げた動画ごとの再生・高評価・低評価・コメント（YouTube Data API）。
+# 低評価は2021年12月から非公開で、持ち主の認証でだけ返る（返らなければ「-」）。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stats:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt -e .
+      - name: 数字を出す
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          from kirinuki import publish_youtube as yt
+          t = yt.access_token(yt.Credentials.from_env())
+          ch = yt._api(t, "GET", "channels?part=statistics,contentDetails&mine=true")["items"][0]
+          s = ch["statistics"]
+          print(f"== チャンネル：登録者 {s.get('subscriberCount')}人・総再生 {s.get('viewCount')}回・動画 {s.get('videoCount')}本")
+          up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+          ids, tok = [], ""
+          while True:
+              r = yt._api(t, "GET", f"playlistItems?part=contentDetails&maxResults=50&playlistId={up}" + (f"&pageToken={tok}" if tok else ""))
+              ids += [i["contentDetails"]["videoId"] for i in r["items"]]
+              tok = r.get("nextPageToken", "")
+              if not tok:
+                  break
+          print("== 動画（公開日時・再生・高評価・低評価・コメント・長さ・公開設定・タイトル）")
+          for k in range(0, len(ids), 50):
+              r = yt._api(t, "GET", "videos?part=snippet,statistics,contentDetails,status&id=" + ",".join(ids[k:k + 50]))
+              for v in r["items"]:
+                  st, sn = v["statistics"], v["snippet"]
+                  print("\t".join([sn["publishedAt"][:16], st.get("viewCount", "0"), st.get("likeCount", "0"), st.get("dislikeCount", "-"),
+                                   st.get("commentCount", "0"), v["contentDetails"]["duration"],
+                                   v["status"]["privacyStatus"], v["id"], sn["title"],
+                                   "地域制限:" + str(len((v["contentDetails"].get("regionRestriction") or {}).get("blocked", [])))]))
+          PY

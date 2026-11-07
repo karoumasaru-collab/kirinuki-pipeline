@@ -1,0 +1,456 @@
+{
+  "2911206890": {
+    "attempts": 0,
+    "digest": "digest.mp4",
+    "drive_folder": "2026-10-26_2911206890",
+    "processed_at": "2026-10-27T22:24:32+00:00",
+    "shorts": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4",
+      "shorts/short_03.mp4",
+      "shorts/short_04.mp4"
+    ],
+    "status": "done",
+    "title": "雑談をしよう",
+    "youtube_ids": [
+      "zLyyfVwY_fk",
+      "Y6IOS_Vf8bQ",
+      "8LtpOpoUGLg",
+      "_hh1UIzmjVU",
+      "65z8CGtmlnk"
+    ],
+    "youtube_pending": []
+  },
+  "2911434035": {
+    "attempts": 0,
+    "digest": "digest.mp4",
+    "drive_folder": "2026-10-27_2911434035",
+    "manual": true,
+    "note": "速報だけ作り直したが、YouTubeの1日の上限で未アップロード",
+    "processed_at": "2026-10-27T12:58:00+00:00",
+    "shorts": [
+      "shorts/short_01.mp4"
+    ],
+    "status": "done",
+    "title": "寝る前にOWやる",
+    "youtube_dropped": [
+      "digest.mp4"
+    ],
+    "youtube_ids": [
+      "DhziHTEOoDE"
+    ],
+    "youtube_pending": []
+  },
+  "2912039696": {
+    "attempts": 0,
+    "digest": "digest.mp4",
+    "drive_folder": "2026-10-27_2912039696",
+    "note": "YouTubeの1日の上限でショート2本が未アップロードだったが、その後の試し実行でドライブのファイルが作り直され、上げ済みの動画と内容が重なるため、上げ直しは取りやめ（2026-10-28）",
+    "processed_at": "2026-10-27T23:46:09+00:00",
+    "shorts": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4",
+      "shorts/short_03.mp4",
+      "shorts/short_04.mp4",
+      "shorts/short_05.mp4"
+    ],
+    "status": "done",
+    "title": "ﾊﾞﾄﾗとツルギとCODをやる",
+    "youtube_ids": [
+      "LDmwK3KMo4U",
+      "vCYwrUyHJgM",
+      "eeDL3ppS9ME",
+      "ZPs-gToH_Pc"
+    ],
+    "youtube_pending": []
+  },
+  "2912126987": {
+    "attempts": 0,
+    "digests": [
+      "digest_1.mp4"
+    ],
+    "drive_folder": "2026-10-27_2912126987",
+    "processed_at": "2026-10-28T05:52:46.652066+00:00",
+    "shorts": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4"
+    ],
+    "status": "done",
+    "title": "何をやろうかな",
+    "youtube_dropped": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4",
+      "digest_1.mp4"
+    ],
+    "youtube_ids": [],
+    "youtube_pending": []
+  },
+  "2912332985": {
+    "attempts": 0,
+    "digests": [
+      "digest_1.mp4"
+    ],
+    "drive_folder": "2026-10-28_2912332985",
+    "processed_at": "2026-10-28T06:20:22.129556+00:00",
+    "shorts": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4"
+    ],
+    "status": "done",
+    "title": "日刊ARCレイダース",
+    "youtube_dropped": [
+      "shorts/short_02.mp4",
+      "shorts/short_01.mp4",
+      "digest_1.mp4"
+    ],
+    "youtube_ids": [],
+    "youtube_pending": []
+  },
+  "2913038338": {
+    "attempts": 0,
+    "drive_folder": "2026-10-28_2913038338",
+    "failed_items": [
+      "roadshow_1"
+    ],
+    "files": [
+      "topic_03.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_02.mp4",
+      "topic_06.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-10-29T01:48:15.489664+09:00",
+    "status": "done",
+    "title": "やぁ！！！！",
+    "youtube_dropped": [
+      "topic_02.mp4",
+      "topic_06.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "youtube_ids": [
+      "tMEgqjIt6CU",
+      "I00c2q15Ixs",
+      "GvsXggJrt10"
+    ],
+    "youtube_pending": []
+  },
+  "2913316541": {
+    "attempts": 0,
+    "drive_folder": "2026-10-29_2913316541",
+    "failed_items": [],
+    "files": [
+      "roadshow_1.mp4",
+      "topic_02.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_03.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-10-29T07:53:11.760000+09:00",
+    "status": "done",
+    "title": "おはようございますARCレイダース",
+    "youtube_dropped": [
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_03.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "youtube_ids": [
+      "-g9YsyNd4QY",
+      "A52R9cTOSQI",
+      "vzMbN0mLFVg",
+      "iESbata0ATg",
+      "jymq1LBtxFA"
+    ],
+    "youtube_pending": []
+  },
+  "2913746376": {
+    "attempts": 0,
+    "drive_folder": "2026-10-29_2913746376",
+    "failed_items": [],
+    "files": [
+      "topic_01.mp4",
+      "topic_02.mp4",
+      "topic_07.mp4",
+      "topic_03.mp4",
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-10-30T02:01:15.646831+09:00",
+    "status": "done",
+    "title": "２０時までARCレイダース",
+    "youtube_dropped": [
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "youtube_ids": [
+      "K3mycl_JPxM",
+      "8rfAplbpQis",
+      "T_kt4PX0Jtw",
+      "jM8GSpZKp0E"
+    ],
+    "youtube_pending": []
+  },
+  "2914049506": {
+    "attempts": 0,
+    "drive_folder": "2026-10-30_2914049506",
+    "failed_items": [],
+    "files": [
+      "topic_06.mp4",
+      "topic_01.mp4",
+      "topic_04.mp4",
+      "topic_07.mp4",
+      "topic_03.mp4",
+      "topic_05.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-10-30T06:18:23.186901+09:00",
+    "status": "done",
+    "title": "俺がリジェクト優勝させる勢いで応援する",
+    "youtube_ids": [
+      "OKHIAxUu9qQ",
+      "hNjDJnwMe0M",
+      "N6hAj91-dWY",
+      "CC4mriFZ4Wg",
+      "dyo06u93wy0",
+      "UViSmAvcrnQ",
+      "3KTZLKsuuac"
+    ],
+    "youtube_pending": []
+  },
+  "2914684964": {
+    "attempts": 0,
+    "drive_folder": "2026-10-30_2914684964",
+    "failed_items": [],
+    "files": [
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_02.mp4",
+      "topic_03.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-10-31T02:50:58.635357+09:00",
+    "status": "done",
+    "title": "雑談して１９時からﾅﾙﾄ",
+    "youtube_ids": [
+      "UREzzzeQB3g",
+      "DiASBT5U9PU",
+      "9znZBBwmTNI",
+      "S36YVSU1hmI",
+      "vBCsMyqSoXc"
+    ],
+    "youtube_pending": []
+  },
+  "2915619490": {
+    "attempts": 0,
+    "drive_folder": "2026-10-31_2915619490",
+    "failed_items": [],
+    "files": [
+      "topic_07.mp4",
+      "topic_06.mp4",
+      "topic_08.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_02.mp4"
+    ],
+    "processed_at": "2026-11-01T08:20:13.091923+09:00",
+    "status": "done",
+    "title": "おはようみんな ﾝﾁｭ.．．．",
+    "youtube_ids": [
+      "N5zwXfXH8W0",
+      "n9Errc-2qYc",
+      "7A_UjQJsUFA",
+      "Ebk6Ndr6QWQ",
+      "DjvhUuUnp7A",
+      "5DUZ9BbZ_uM"
+    ],
+    "youtube_pending": []
+  },
+  "2915891576": {
+    "attempts": 1,
+    "drive_folder": "2026-11-01_2915891576",
+    "failed_items": [],
+    "files": [
+      "topic_03.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_07.mp4"
+    ],
+    "processed_at": "2026-11-01T11:20:12.776126+09:00",
+    "status": "done",
+    "title": "ARCレーダーｽをやり、６時からﾕﾘｰｽ応援する",
+    "youtube_dropped": [],
+    "youtube_ids": [
+      "Ka6fanXQy9M",
+      "fIlW29VLOFw",
+      "2xNYbTcDMHU",
+      "teyxixBBc1c",
+      "VC0ybrd7wg4"
+    ],
+    "youtube_pending": []
+  },
+  "2916453060": {
+    "attempts": 0,
+    "drive_folder": "2026-11-01_2916453060",
+    "failed_items": [],
+    "files": [
+      "topic_06.mp4",
+      "topic_03.mp4",
+      "topic_07.mp4",
+      "topic_08.mp4"
+    ],
+    "processed_at": "2026-11-02T09:30:51.460566+09:00",
+    "status": "done",
+    "title": "ﾑﾗｹﾞ全力応援 Shadowverse Premier Series 26-27 第10節",
+    "youtube_dropped": [
+      "topic_08.mp4"
+    ],
+    "youtube_ids": [
+      "u2Z3e43KL5k",
+      "umCOMr5TeFI",
+      "1fJ1mqKJYZk",
+      "Z_cBkk2tTBo"
+    ],
+    "youtube_pending": []
+  },
+  "2917054354": {
+    "attempts": 0,
+    "drive_folder": "2026-11-02_2917054354",
+    "failed_items": [],
+    "files": [
+      "topic_05.mp4",
+      "topic_08.mp4",
+      "topic_04.mp4",
+      "topic_06.mp4"
+    ],
+    "processed_at": "2026-11-02T14:09:02.410053+09:00",
+    "status": "done",
+    "title": "８時半からﾕﾘｰｽ応援する",
+    "youtube_ids": [
+      "15A0IesjSAc",
+      "MGz8puTNoN8",
+      "L11f8-1MsD4",
+      "xjyrWkfWduo"
+    ],
+    "youtube_pending": []
+  },
+  "2917621996": {
+    "attempts": 0,
+    "drive_folder": "2026-11-03_2917621996",
+    "failed_items": [],
+    "files": [
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_07.mp4",
+      "topic_08.mp4"
+    ],
+    "processed_at": "2026-11-03T08:58:37.135418+09:00",
+    "status": "done",
+    "title": "疲れて寝いていた男ARCレイダースをする",
+    "youtube_dropped": [
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_07.mp4",
+      "topic_08.mp4"
+    ],
+    "youtube_ids": [],
+    "youtube_pending": []
+  },
+  "2918350858": {
+    "attempts": 0,
+    "drive_folder": "2026-11-03_2918350858",
+    "failed_items": [],
+    "files": [
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_03.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-11-04T02:03:23.661591+09:00",
+    "status": "done",
+    "title": "ブリーチ続き",
+    "youtube_ids": [
+      "bzx7iYhl0gg",
+      "4_KIrf-uzzo",
+      "8wB5732f-_A",
+      "O-OYwcNL0vw",
+      "XzCjozctIv4"
+    ],
+    "youtube_pending": []
+  },
+  "2918536127": {
+    "attempts": 0,
+    "drive_folder": "2026-11-04_2918536127",
+    "failed_items": [],
+    "files": [
+      "shorts/short_01.mp4",
+      "shorts/short_02.mp4",
+      "topic_03.mp4",
+      "topic_05.mp4",
+      "topic_04.mp4",
+      "topic_06.mp4"
+    ],
+    "processed_at": "2026-11-06T12:07:00.997537+09:00",
+    "status": "done",
+    "title": "ARCレイダースをばんかいする",
+    "youtube_dropped": [
+      "topic_03.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_05.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "topic_04.mp4",
+      "topic_06.mp4"
+    ],
+    "youtube_ids": [
+      "wcoxwzvX0YQ",
+      "lrIl_oZXHG0",
+      "k5FvX_vNFeQ",
+      "G9VpwDEPdww",
+      "luIJbgIUSIk",
+      "R4vUJNCMSTQ"
+    ],
+    "youtube_pending": []
+  },
+  "2919223663": {
+    "attempts": 0,
+    "drive_folder": "2026-11-04_2919223663",
+    "failed_items": [],
+    "files": [
+      "topic_03.mp4",
+      "topic_04.mp4",
+      "topic_05.mp4",
+      "topic_06.mp4",
+      "shorts/short_01.mp4"
+    ],
+    "processed_at": "2026-11-05T01:44:39.402126+09:00",
+    "status": "done",
+    "title": "ちょっと話してブリーチの続き",
+    "youtube_ids": [
+      "Dbc93_f5GWs",
+      "r8q6uvE-xZc",
+      "TPUeCsCe1zc",
+      "lBXmyxBKo8s",
+      "D9ZtsRRolKA"
+    ],
+    "youtube_pending": []
+  }
+}

@@ -1,0 +1,100 @@
+name: retry
+
+# 1時間おきに、上げ直し待ちを空いた枠で上げる（DESIGN.md 10）。
+# 待ちが無い・枠が無い・本処理（run.yml）が動いている間は、ツールを入れる前に数十秒で終わる。
+on:
+  repository_dispatch:
+    types: [retry_tick]      # Cloudflare Worker から毎時47分に届く（時刻どおりに動く）
+  schedule:
+    - cron: "17 */3 * * *"   # Worker が止まったときの保険（GitHub の定期実行は飛ばされることがある）
+  workflow_dispatch:
+
+# run.yml と同じグループにすると、順番待ちの配信処理が取り消されるので分ける
+concurrency:
+  group: kirinuki-retry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  retry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: 上げる物と枠があるか（標準ライブラリだけで確認）
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          busy=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow run.yml --status in_progress --json databaseId --jq length)
+          busy_q=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow run.yml --status queued --json databaseId --jq length)
+          python3 - "$busy" "$busy_q" <<'PY' >> "$GITHUB_OUTPUT"
+          import json, sys
+          from datetime import datetime, timedelta, timezone
+          import re
+          busy = int(sys.argv[1]) + int(sys.argv[2])
+          now = datetime.now(timezone.utc)
+          ups = json.load(open("state/uploads.json"))
+          used = sum(1 for t in ups if datetime.fromisoformat(t) > now - timedelta(hours=24))
+          conf = open("config/channel.yaml", encoding="utf-8").read()
+          limit = int(re.search(r"daily_upload_limit:\s*(\d+)", conf).group(1))
+          m = re.search(r"short_daily_limit:\s*(\d+)", conf)
+          short_limit = int(m.group(1)) if m else 2
+          sups = json.load(open("state/uploads_shorts.json"))
+          sused = sum(1 for t in sups if datetime.fromisoformat(t) > now - timedelta(hours=24))
+          st = json.load(open("state/processed.json"))
+          files = [f for e in st.values() for f in (e.get("youtube_pending") or [])]
+          spend = sum(1 for f in files if f.startswith("shorts/"))
+          pending = len(files) - spend
+          go = busy == 0 and ((pending > 0 and used < limit) or (spend > 0 and sused < short_limit))
+          print(f"go={'true' if go else 'false'}")
+          print(f"上げ直し待ち 長い{pending}本・ショート{spend}本・直近24時間 {used}/{limit}本・ショート {sused}/{short_limit}本"
+                f"・本処理 {busy}件 → {'上げる' if go else '何もしない'}", file=sys.stderr)
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ツールを入れる
+        if: steps.check.outputs.go == 'true'
+        run: |
+          curl -fsSL -o /tmp/rclone.deb \
+            "https://github.com/rclone/rclone/releases/download/v1.75.2/rclone-v1.75.2-linux-amd64.deb"
+          sudo dpkg -i /tmp/rclone.deb
+          pip install -q -r requirements.txt -e .
+      - name: rclone の設定
+        if: steps.check.outputs.go == 'true'
+        env:
+          RCLONE_CONFIG_TEXT: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          mkdir -p ~/.config/rclone
+          printf '%s\n' "$RCLONE_CONFIG_TEXT" > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+      - name: 上げ直し
+        if: steps.check.outputs.go == 'true'
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -m kirinuki retry
+      - name: 記録をコミット
+        if: steps.check.outputs.go == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/processed.json state/uploads.json state/uploads_shorts.json
+          if git diff --cached --quiet; then echo "記録の変更なし"; exit 0; fi
+          git commit -m "上げ直しの記録を更新"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          exit 1
+      - name: 後片付け
+        if: always()
+        run: rm -rf work ~/.config/rclone/rclone.conf

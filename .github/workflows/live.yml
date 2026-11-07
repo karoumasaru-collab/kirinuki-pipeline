@@ -1,0 +1,32 @@
+name: live
+
+# 加藤さんが今配信中かを、Twitch の API で確かめてログに出すだけ（手で作り直す前の確認用。CLAUDE.md ルール8）
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt -e .
+      - name: 確かめる
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: |
+          python - <<'PY'
+          from kirinuki import twitch
+          from kirinuki.config import load_config
+          h = twitch.Helix()
+          live = h.is_live(h.user_id(load_config().channel_login))
+          print(f"== {'配信中' if live else 'オフライン'}")
+          PY

@@ -1,0 +1,67 @@
+channel_login: kato_junichi0817
+model: claude-sonnet-5-5
+peaks:
+  bin_sec: 5
+  smooth_bins: 3
+  baseline_window_sec: 600
+  peak_threshold: 2.5        # 長いまとめ動画（〜1時間）の材料を集めるため緩めた
+  merge_within_sec: 60
+  lead_sec: 45
+  tail_sec: 15
+  context_lead_sec: 60     # 文字起こし・速報用に取る範囲（山場の60秒前〜15秒後）
+  context_tail_sec: 15
+  max_candidates: 80
+  reaction_words:
+    laugh: ["草", "ｗｗ", "www", "笑"]
+    hype: ["！？", "!?", "ファ", "うおお", "ええ", "神"]
+  bonus: { laugh: 0.5, hype: 0.5, spam_per_msg: 0.3, spam_min_count: 3 }
+output:
+  shorts_per_vod: 2            # ショートは1配信2本まで（2026-11-03 オーナー判断で再開：前のショートは1本1,200〜1,900回と長い動画より見られている。新しく見てくれる人の入口にする）
+  shorts_min: 0
+  short_min_quality: 8          # 面白さ8以上のときだけショートを作る
+  transcribe_top: 30           # 盛り上がり上位30件だけ文字起こし（残りはチャットと画面だけでClaudeに渡す）
+  short_max_sec: 60
+  digest_min_sec: 480          # 途中の広告（ミッドロール）は8分以上の動画から
+  digest_max_sec: 3600         # 1本1時間まで
+  digests_max: 3               # 1配信で最大3本
+  roadshow_part_sec: 7200      # ロードショー型ダイジェストは2時間を超えたら前編・後編に分ける
+  roadshow: false              # ロードショー型ダイジェストは当面作らない（2026-10-29 オーナー判断：単体動画に集中し、おすすめに乗るかを数字で見る）
+  singles_max: 4               # 単体動画は1配信4本まで（1日2配信×4本＝8本で、1日の枠に収める。2026-10-30 変更）
+  prefer: ["BLEACH", "ブリーチ", "ALGS", "Apex", "ナルト", "NARUTO"]  # 単体動画の選定と上げ直しで先に回す（ゲーム名かタイトルに含む。2026-11-01）
+  avoid: ["ARC Raiders", "ARCレイダース"]   # 後回しにする（面白さ9以上はふつうの扱い。ARCしかない配信ではそのまま選ぶ）
+  english_subs_games: ["ARC Raiders", "ARCレイダース"]   # 英語の会話に日本語訳の字幕を付けるゲーム（2026-11-05 オーナー判断）
+  avoid_max_sec: 1200          # avoid（ARC）の話題は1本20分まで。山場がいちばん固まった1つの事件の区間に切り詰める（2026-11-03 オーナー判断：他チャンネルのARCは10〜20分で10万〜25万再生、うちの1時間版はクリック率0.2〜2.2%）
+  normal_max_sec: 1200         # prefer にも avoid にも当たらない話題（雑談など）は1本20分まで。prefer（BLEACH・ナルト・ALGS）は topic_max_sec の60分まで（2026-11-04 オーナー判断：短い方が再生回数とおすすめに強く、長い方は再生時間を稼げるので、題材で分ける）
+  pending_max_hours: 168       # 上げ直し待ちは7日（ドライブの保存期間）まで。待ちは題材の優先 → 面白さ → 新しい順に上げる（2026-11-01 オーナー判断）
+  digest_max_short_scenes: 2   # ショートにした場面は速報1本につき2つまで
+  title_band: true
+comments:
+  enabled: true
+  duration_sec: 4.0
+  font: "Noto Sans CJK JP"
+  font_size_short: 56
+  font_size_digest: 52
+  max_lanes_short: 8
+  max_lanes_digest: 11
+  max_chars: 30
+  drop_emote_only: true
+  drop_urls: true
+  ng_words_file: config/ng_words.txt
+youtube:
+  enabled: true                 # 実際に上げるかは、実行時の入力 youtube: true で決める
+  privacy: public               # public（自動公開）/ private（非公開で上げて手動で公開）
+  daily_upload_limit: 4   # 2026-11-03 オーナー判断：11/1 から表示回数がほぼ0に。本数を絞って、見られる動画だけを出す
+  short_daily_limit: 2          # ショートは1日2本まで。長い動画の枠（daily_upload_limit）とは別に数える（2026-11-03）
+  title_suffix: "【加藤純一】"
+  category_id: 20               # ゲーム
+  tags: ["加藤純一", "うんこちゃん", "切り抜き"]
+auto:
+  max_age_hours: 48          # これより前に終わった配信は自動では処理しない
+  max_vods_per_run: 2        # 1回の定期実行で処理する本数の上限
+drive:
+  remote: gdrive
+  root: kirinuki
+  retention_days: 7
+whisper:
+  model: base               # small では候補30件の文字起こしに40分かかったため軽くした
+  compute_type: int8

@@ -1,0 +1,127 @@
+name: retitle
+
+# 動画のタイトルを付け替える。上がる前ならドライブの upload.md を、上がった後（youtube_id を指定）なら YouTube を直す。
+# title を空で動かすと、その動画の今のタイトル・概要欄・チャプター・サムネの言葉をログに出すだけ。
+on:
+  workflow_dispatch:
+    inputs:
+      vod_id:
+        description: "元配信の VOD ID"
+        required: true
+      file:
+        description: "動画のファイル名（例 topic_04.mp4）"
+        required: true
+      title:
+        description: "新しいタイトル（空なら中身を見るだけ）"
+        required: false
+        default: ""
+      replace:
+        description: "上がる前の概要欄・ゲーム名の置き換え（例 ARC Raiders。=>Apex Legends。;#ARCRaiders=>#ALGS）"
+        required: false
+        default: ""
+      youtube_id:
+        description: "上がった後なら YouTube の動画ID（例 fIlW29VLOFw）"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+env:
+  TOOL_RCLONE_VERSION: "v1.75.2"
+
+jobs:
+  retitle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ツールを入れる
+        run: |
+          curl -fsSL -o /tmp/rclone.deb \
+            "https://github.com/rclone/rclone/releases/download/${TOOL_RCLONE_VERSION}/rclone-${TOOL_RCLONE_VERSION}-linux-amd64.deb"
+          sudo dpkg -i /tmp/rclone.deb
+          pip install -q -r requirements.txt -e .
+      - name: rclone の設定
+        env:
+          RCLONE_CONFIG_TEXT: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          mkdir -p ~/.config/rclone
+          printf '%s\n' "$RCLONE_CONFIG_TEXT" > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+      - name: 見る・付け替える
+        env:
+          VOD_ID: ${{ inputs.vod_id }}
+          FILE: ${{ inputs.file }}
+          TITLE: ${{ inputs.title }}
+          YOUTUBE_ID: ${{ inputs.youtube_id }}
+          REPLACE: ${{ inputs.replace }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          from kirinuki import publish_drive, state, topics
+          from kirinuki.config import load_config
+          vod, f, title = os.environ["VOD_ID"], os.environ["FILE"], os.environ["TITLE"].strip()
+          cfg = load_config()
+          e = state.load()[vod]
+          folder, base = e["drive_folder"], Path("work")
+          print(f"== 上げ直し待ち：{e.get('youtube_pending')}")
+          publish_drive.download(folder, ["upload.md", "metadata.json"], base, cfg.drive)
+          meta = json.loads((base / "metadata.json").read_text(encoding="utf-8"))
+          for r in meta.get("results", []):
+              if r.get("file") == f:
+                  print(f"== タイトル：{r['title']}\n== 概要欄：\n{r['description']}")
+          for it in meta.get("items", []):
+              if f"{it['id']}.mp4" == f and it.get("video"):
+                  v = it["video"]
+                  print(f"== サムネの言葉：{v.get('thumb_text')}　吹き出し：{v.get('bubbles')}")
+          rep = [x.split("=>", 1) for x in os.environ["REPLACE"].split(";") if "=>" in x]
+          if not title and not rep:
+              raise SystemExit(0)
+          title = topics.fix_words(title)
+          if os.environ["YOUTUBE_ID"]:
+              from kirinuki import publish_youtube as yt
+              t = yt.access_token(yt.Credentials.from_env())
+              vid = os.environ["YOUTUBE_ID"]
+              sn = yt._api(t, "GET", f"videos?part=snippet&id={vid}")["items"][0]["snippet"]
+              print(f"== YouTube の今のタイトル：{sn['title']}")
+              sn["title"] = title   # 概要欄・タグなどはそのまま送り返す（送らないと消える）
+              body = {"id": vid, "snippet": {k: sn[k] for k in ("title", "description", "categoryId", "tags",
+                                                                 "defaultLanguage") if k in sn}}
+              yt._api(t, "PUT", "videos?part=snippet", body)
+              print(f"== YouTube を付け替えた：{title}")
+              raise SystemExit(0)
+          if f not in e.get("youtube_pending", []):
+              raise SystemExit(f"{f} は上げ直し待ちにない（上がった後なら YouTube Studio で直す）")
+          md = (base / "upload.md").read_text(encoding="utf-8")
+          if title:
+              pat = re.compile(r"(## " + re.escape(f) + r"（[^）]*）.*?タイトル：\n```\n)(.*?)(\n```)", re.S)
+              md, n = pat.subn(lambda m: m.group(1) + title + m.group(3), md, count=1)
+              if n != 1:
+                  raise SystemExit(f"upload.md に {f} の見出しが無い")
+          if rep:   # その動画の節（次の「## 」まで）の中だけ置き換える
+              a = md.index(f"## {f}（")
+              b = md.find("\n## ", a + 1)
+              b = len(md) if b < 0 else b
+              sec = md[a:b]
+              for old, new in rep:
+                  print(f"== 置き換え：{old} → {new}（{sec.count(old)}か所）")
+                  sec = sec.replace(old, new)
+              md = md[:a] + sec + md[b:]
+          out = base / "out"
+          out.mkdir()
+          (out / "upload.md").write_text(md, encoding="utf-8")
+          publish_drive.upload(out, folder, cfg.drive)
+          print(f"== 付け替えた：{title or '（タイトルはそのまま）'}")
+          PY
+      - name: 後片付け
+        if: always()
+        run: rm -rf work ~/.config/rclone/rclone.conf

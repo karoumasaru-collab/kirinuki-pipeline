@@ -1,0 +1,27 @@
+name: icons
+
+# チャンネルアイコンの見本を作る（tools/make_icons.py）
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  icons:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: フォントと Pillow を入れる
+        run: |
+          for i in 1 2 3; do timeout 180 sudo apt-get update -q -o Acquire::Retries=3 -o Acquire::http::Timeout=20 && break; echo "apt-get update をやり直し（$i）"; sleep 10; done
+          timeout 600 sudo apt-get install -y -q -o Acquire::Retries=3 fonts-noto-cjk fonts-noto-cjk-extra
+          pip install -q pillow==11.3.0
+          ls /usr/share/fonts/opentype/noto/ | grep -E "Black|Medium"
+      - run: python tools/make_icons.py out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: icons
+          path: out/*.png
+          retention-days: 3

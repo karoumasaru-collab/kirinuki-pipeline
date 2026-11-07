@@ -1,0 +1,5481 @@
+{
+ "video": {
+  "id": "1234567890",
+  "title": "テスト配信",
+  "created_at": "2026-10-25T12:00:00Z",
+  "start": 0,
+  "end": 1500,
+  "length": 1500,
+  "game": "テストゲーム"
+ },
+ "comments": [
+  {
+   "content_offset_seconds": 5.03,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 7.65,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 11.61,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 17.02,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 21.27,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 25.28,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 28.2,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 32.55,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 38.02,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 43.46,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 48.67,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 51.47,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 56.66,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 60.58,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 64.14,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 68.47,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 73.87,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 77.7,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 80.98,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 86.23,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 90.89,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 95.52,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 99.86,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 103.09,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 107.7,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 110.77,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 113.94,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 118.85,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 121.62,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 126.75,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 129.57,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 132.95,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 137.09,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 140.2,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 144.34,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 148.18,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 153.07,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 157.3,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 160.35,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 162.95,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 166.88,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 171.41,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 176.54,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 181.57,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 186.12,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 189.45,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 194.5,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 199.47,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 203.71,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 207.69,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 210.44,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 213.28,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 217.67,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 220.9,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 223.75,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 227.37,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 230.87,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 233.67,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 238.73,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 241.37,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 245.77,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 250.08,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 252.66,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 256.98,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 259.84,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 263.45,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 266.06,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 269.14,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 273.8,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 276.93,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 282.24,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 286.37,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 289.18,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 291.89,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 296.33,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 300.13,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 304.15,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 308.43,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 311.53,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 316.75,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 321.76,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 324.77,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 330.17,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 335.03,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 340.07,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 344.16,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 348.45,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 352.95,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 356.86,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 362.06,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 367.31,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 370.98,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 373.94,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 377.81,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 381.32,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 385.46,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 388.68,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 392.23,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 396.75,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 402.09,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 404.99,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 408.65,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 413.64,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 416.15,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 420.74,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 423.96,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 427.6,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 432.72,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 436.43,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 440.18,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 443.18,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 446.46,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 450.29,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 455.52,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 460.29,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 464.27,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 469.28,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 474.21,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 477.27,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 482.29,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 487.75,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 493.09,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 496.54,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 499.09,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 504.53,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 508.86,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 511.72,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 516.84,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 521.41,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 524.21,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 528.59,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 531.91,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 536.81,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 541.9,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 546.36,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 549.2,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 552.54,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 555.17,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 559.71,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 563.15,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 568.47,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 573.51,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 577.97,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 582.39,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 587.51,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 590.63,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 594.0,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 596.96,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 600.09,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 600.42,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 600.45,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 600.47,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 600.57,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 601.4,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 601.63,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 601.88,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 601.9,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.09,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.1,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.15,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.33,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.34,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.51,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.55,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.55,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.55,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 602.9,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 603.12,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 603.9,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 604.11,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 604.27,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 604.44,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 604.54,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 605,
+   "message": {
+    "body": "Kappa",
+    "fragments": [
+     {
+      "text": "Kappa",
+      "emoticon": {
+       "emoticon_id": "25"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 605.13,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 605.36,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 605.58,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 605.81,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 606,
+   "message": {
+    "body": "Kappa 草",
+    "fragments": [
+     {
+      "text": "Kappa",
+      "emoticon": {
+       "emoticon_id": "25"
+      }
+     },
+     {
+      "text": " 草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 606.08,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 606.13,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 606.32,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 606.81,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 607.25,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 607.71,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 607.95,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 607.96,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 608.71,
+   "message": {
+    "body": "ｗｗｗ",
+    "fragments": [
+     {
+      "text": "ｗｗｗ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 608.72,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 609.06,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 609.17,
+   "message": {
+    "body": "wwwww",
+    "fragments": [
+     {
+      "text": "wwwww",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 609.4,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 609.96,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 612.59,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 615.54,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 618.9,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 624.37,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 627.75,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 630.2,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 630.41,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 630.64,
+   "message": {
+    "body": "それはない",
+    "fragments": [
+     {
+      "text": "それはない",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 631.25,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 632.07,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 632.2,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 632.2,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 632.44,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 634.09,
+   "message": {
+    "body": "それはない",
+    "fragments": [
+     {
+      "text": "それはない",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 634.13,
+   "message": {
+    "body": "草",
+    "fragments": [
+     {
+      "text": "草",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 634.89,
+   "message": {
+    "body": "それはない",
+    "fragments": [
+     {
+      "text": "それはない",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 635.87,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 640.55,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 644.26,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 647.66,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 650.46,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 654.38,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 657.25,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 661.85,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 664.47,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 669.17,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 674.43,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 678.06,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 680.75,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 683.85,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 686.53,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 689.33,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 693.38,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 698.64,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 703.29,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 707.06,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 710.22,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 714.47,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 718.27,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 721.11,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 726.32,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 731.08,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 733.93,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 737.2,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 742.69,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 747.06,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 750.16,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 753.74,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 756.56,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 762.01,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 766.2,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 771.33,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 775.87,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 780.87,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 785.27,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 789.4,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 791.93,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 796.89,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 800.96,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 805.27,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 810.3,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 813.68,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 816.38,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 820.43,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 823.13,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 825.75,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 830.53,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 834.02,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 838.92,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 844.33,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 847.97,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 851.98,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 854.75,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 859.52,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 864.27,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 867.63,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 871.39,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 876.42,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 880.75,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 885.8,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 890.27,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 894.99,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 899.01,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 902.51,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 907.59,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 912.41,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 917.34,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 920.33,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 923.55,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 926.21,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 930.16,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 934.13,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 938.79,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 943.72,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 947.45,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 951.35,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 953.99,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 958.82,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 961.42,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 964.32,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 967.14,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 971.58,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 975.23,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 978.07,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 982.4,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 986.74,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 991.19,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 994.58,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 999.96,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1004.85,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1008.91,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1011.53,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1015.36,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1019.23,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1024.59,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1028.55,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1033.89,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1038.1,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1041.29,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1045.89,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1049.91,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1052.85,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1056.61,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1061.92,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1064.61,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1069.43,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1074.3,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1078.86,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1082.85,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1087.52,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1091.08,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1094.66,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1098.19,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1100.72,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1105.68,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1109.97,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1113.09,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1117.57,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1122.31,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1125.92,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1131.22,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1136.3,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1140.16,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1143.69,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1146.58,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1150.17,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1155.55,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1160.86,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1165.27,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1169.55,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1172.36,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1175.78,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1180.97,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1185.89,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1189.91,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1194.68,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1198.29,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1200.65,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1201.18,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1201.19,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1201.37,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1201.73,
+   "message": {
+    "body": "ファーー",
+    "fragments": [
+     {
+      "text": "ファーー",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1202.22,
+   "message": {
+    "body": "!?",
+    "fragments": [
+     {
+      "text": "!?",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1202.3,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1202.49,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1202.73,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1202.87,
+   "message": {
+    "body": "!?",
+    "fragments": [
+     {
+      "text": "!?",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1203.38,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1203.67,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1203.73,
+   "message": {
+    "body": "ファーー",
+    "fragments": [
+     {
+      "text": "ファーー",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1203.85,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1205.14,
+   "message": {
+    "body": "ファーー",
+    "fragments": [
+     {
+      "text": "ファーー",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1205.36,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1205.53,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1205.57,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1205.94,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1206.1,
+   "message": {
+    "body": "!?",
+    "fragments": [
+     {
+      "text": "!?",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1206.75,
+   "message": {
+    "body": "!?",
+    "fragments": [
+     {
+      "text": "!?",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1207.11,
+   "message": {
+    "body": "ファーー",
+    "fragments": [
+     {
+      "text": "ファーー",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1207.42,
+   "message": {
+    "body": "ファーー",
+    "fragments": [
+     {
+      "text": "ファーー",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1208.59,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1208.8,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1209.34,
+   "message": {
+    "body": "神",
+    "fragments": [
+     {
+      "text": "神",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1209.95,
+   "message": {
+    "body": "うおおおお",
+    "fragments": [
+     {
+      "text": "うおおおお",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1210.55,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1214.31,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1218.06,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1222.33,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1226.74,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1229.98,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1234.4,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1237.07,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1239.59,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1243.42,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1246.8,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1249.57,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1254.46,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1257.3,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1261.86,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1267.15,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1271.95,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1274.97,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1278.5,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1281.42,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1285.82,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1289.77,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1293.15,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1297.51,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1300.66,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1305.47,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1309.61,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1313.38,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1316.16,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1320.94,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1325.07,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1328.41,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1331.27,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1333.77,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1337.85,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1342.48,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1345.29,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1348.85,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1353.13,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1355.84,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1359.26,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1362.12,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1367.29,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1369.99,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1373.34,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1377.56,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1381.66,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1387.02,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1390.73,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1394.11,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1398.32,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1401.29,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1404.93,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1408.83,
+   "message": {
+    "body": "眠い",
+    "fragments": [
+     {
+      "text": "眠い",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1413.34,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1417.74,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1420.89,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1425.47,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1429.45,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1433.28,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1438.02,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1443.18,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1445.76,
+   "message": {
+    "body": "えぐい",
+    "fragments": [
+     {
+      "text": "えぐい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1449.43,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1454.47,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1459.03,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1463.59,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1466.11,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1468.96,
+   "message": {
+    "body": "こんにちは",
+    "fragments": [
+     {
+      "text": "こんにちは",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1474.46,
+   "message": {
+    "body": "ナイス",
+    "fragments": [
+     {
+      "text": "ナイス",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1479.14,
+   "message": {
+    "body": "なるほど",
+    "fragments": [
+     {
+      "text": "なるほど",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1482.06,
+   "message": {
+    "body": "おつ",
+    "fragments": [
+     {
+      "text": "おつ",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1485.42,
+   "message": {
+    "body": "それな",
+    "fragments": [
+     {
+      "text": "それな",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1489.23,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1492.88,
+   "message": {
+    "body": "次なにやるの",
+    "fragments": [
+     {
+      "text": "次なにやるの",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1496.64,
+   "message": {
+    "body": "かわいい",
+    "fragments": [
+     {
+      "text": "かわいい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1499.59,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  },
+  {
+   "content_offset_seconds": 1503.66,
+   "message": {
+    "body": "はい",
+    "fragments": [
+     {
+      "text": "はい",
+      "emoticon": null
+     }
+    ]
+   }
+  }
+ ]
+}

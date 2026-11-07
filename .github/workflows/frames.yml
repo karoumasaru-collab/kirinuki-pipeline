@@ -1,0 +1,69 @@
+name: frames
+
+# ドライブにある上げ直し待ちの動画から、数枚の静止画を取り出して見る（字幕の見え方の確認など）。Mac には動画を落とさない
+on:
+  workflow_dispatch:
+    inputs:
+      vod_id:
+        description: "元配信の VOD ID"
+        required: true
+      file:
+        description: "動画のファイル名（例 topic_05.mp4）。サムネなら thumbs/topic_05.jpg"
+        required: true
+      at:
+        description: "取り出す時刻（動画の頭からの秒、カンマ区切り）"
+        required: false
+        default: "60,120,180,240"
+
+permissions:
+  contents: read
+
+env:
+  TOOL_RCLONE_VERSION: "v1.75.2"
+
+jobs:
+  frames:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: ツールを入れる
+        run: |
+          for i in 1 2 3; do timeout 180 sudo apt-get update -q -o Acquire::Retries=3 -o Acquire::http::Timeout=20 && break; echo "apt-get update をやり直し（$i）"; sleep 10; done
+          timeout 600 sudo apt-get install -y -q -o Acquire::Retries=3 ffmpeg
+          curl -fsSL -o /tmp/rclone.deb \
+            "https://github.com/rclone/rclone/releases/download/${TOOL_RCLONE_VERSION}/rclone-${TOOL_RCLONE_VERSION}-linux-amd64.deb"
+          sudo dpkg -i /tmp/rclone.deb
+          pip install -q pyyaml
+      - name: rclone の設定
+        env:
+          RCLONE_CONFIG_TEXT: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          mkdir -p ~/.config/rclone
+          printf '%s\n' "$RCLONE_CONFIG_TEXT" > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+      - name: 取り出す
+        env:
+          VOD_ID: ${{ inputs.vod_id }}
+          FILE: ${{ inputs.file }}
+          AT: ${{ inputs.at }}
+        run: |
+          folder=$(python3 -c "import json,os;print(json.load(open('state/processed.json'))[os.environ['VOD_ID']]['drive_folder'])")
+          remote=$(python3 -c "import yaml;d=yaml.safe_load(open('config/channel.yaml',encoding='utf-8'))['drive'];print(d['remote']+':'+d['root'])")
+          mkdir -p work/frames
+          rclone lsl "${remote}/${folder}/" | grep -E "mp4|jpg" || true
+          case "$FILE" in *.jpg) rclone copy "${remote}/${folder}" work/frames --include "/${FILE}" --update; mv work/frames/thumbs/*.jpg work/frames/ 2>/dev/null || true; ls -la work/frames; exit 0;; esac
+          rclone copyto "${remote}/${folder}/${FILE}" work/video.mp4
+          echo "== 長さ $(ffprobe -v error -show_entries format=duration -of csv=p=0 work/video.mp4)秒"
+          for s in ${AT//,/ }; do
+            ffmpeg -hide_banner -loglevel error -y -ss "$s" -i work/video.mp4 -frames:v 1 -vf scale=960:-2 -q:v 3 "work/frames/${s}.jpg"
+          done
+          ls -la work/frames
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frames
+          path: work/frames/*.jpg
+          retention-days: 3
+      - name: 後片付け
+        if: always()
+        run: rm -rf work ~/.config/rclone/rclone.conf

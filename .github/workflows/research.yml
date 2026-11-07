@@ -1,0 +1,54 @@
+name: research
+
+# ほかの切り抜きチャンネルの、よく見られている動画（タイトル・再生数・サムネURL）をログに出す（YouTube Data API）。
+# search.list は1回100単位を使うので、手動で時々だけ動かす。
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "検索する言葉"
+        required: false
+        default: "加藤純一 切り抜き"
+      days:
+        description: "何日前までに公開された動画か"
+        required: false
+        default: "7"
+
+permissions:
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt -e .
+      - name: 調べる
+        env:
+          QUERY: ${{ inputs.query }}
+          DAYS: ${{ inputs.days }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, urllib.parse
+          from datetime import datetime, timedelta, timezone
+          from kirinuki import publish_youtube as yt
+          t = yt.access_token(yt.Credentials.from_env())
+          after = (datetime.now(timezone.utc) - timedelta(days=int(os.environ["DAYS"]))).strftime("%Y-%m-%dT%H:%M:%SZ")
+          q = urllib.parse.quote(os.environ["QUERY"])
+          r = yt._api(t, "GET", f"search?part=snippet&type=video&maxResults=50&order=viewCount&q={q}&publishedAfter={after}")
+          ids = [i["id"]["videoId"] for i in r["items"]]
+          v = yt._api(t, "GET", "videos?part=snippet,statistics,contentDetails&id=" + ",".join(ids))
+          print("== 再生・長さ・チャンネル・動画ID・タイトル")
+          for x in sorted(v["items"], key=lambda x: -int(x["statistics"].get("viewCount", 0))):
+              sn = x["snippet"]
+              print("\t".join([x["statistics"].get("viewCount", "0"), x["contentDetails"]["duration"],
+                               sn["channelTitle"], x["id"], sn["title"]]))
+          PY

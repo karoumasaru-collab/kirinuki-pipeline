@@ -1,0 +1,6 @@
+PyYAML==6.0.2
+pytest==8.3.4
+anthropic==2.3.0
+faster-whisper==1.2.1
+# Twitch側の仕様変更に追従するため、yt-dlp は版を固定せず毎回最新を入れる
+yt-dlp

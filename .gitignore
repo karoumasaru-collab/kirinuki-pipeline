@@ -1,0 +1,17 @@
+work/
+*.mp4
+*.mkv
+*.ts
+*.m4a
+*.wav
+*.mp3
+*.json
+!state/*.json
+!tests/fixtures/*.json
+.env
+__pycache__/
+.venv/
+.DS_Store
+
+# 手元だけに置くメモ（公開リポジトリに出さない）
+docs/IDEAS.md

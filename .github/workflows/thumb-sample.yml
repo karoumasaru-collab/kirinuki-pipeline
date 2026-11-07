@@ -1,0 +1,54 @@
+name: thumb-sample
+
+# サムネのデザイン見本：前の実行の計画（plan.json）を使い、単体動画のサムネだけ作る（動画は作らない）
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "計画を借りる run.yml の実行ID"
+        required: true
+      texts:
+        description: "見本の言葉（「セリフ=大きくする語|…」を単体動画の順に。空なら計画のまま）"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  sample:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ツールを入れる
+        run: |
+          for i in 1 2 3; do timeout 180 sudo apt-get update -q -o Acquire::Retries=3 -o Acquire::http::Timeout=20 && break; echo "apt-get update をやり直し（$i）"; sleep 10; done
+          timeout 600 sudo apt-get install -y -q -o Acquire::Retries=3 ffmpeg fonts-noto-cjk fonts-noto-cjk-extra
+          pip install -q -r requirements.txt -r requirements-thumb.txt -e .
+      - name: 顔切り抜きモデルのキャッシュ
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-u2net-human-seg-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan
+          path: work
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+      - name: サムネを作る
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KIRINUKI_SAMPLE_TEXTS: ${{ inputs.texts }}
+        run: python -m kirinuki thumb-sample --plan work/plan.json --out samples
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thumbs
+          path: samples/*.jpg
+          retention-days: 3

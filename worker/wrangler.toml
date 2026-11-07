@@ -1,0 +1,13 @@
+# Cloudflare Worker「kirinuki-notify」を Mac から反映するための設定（npx wrangler deploy）。
+# 秘密の値（GH_TOKEN・TWITCH_EVENTSUB_SECRET）はここに書かない。Cloudflare 側に入っているものをそのまま使う。
+name = "kirinuki-notify"
+main = "notify.js"
+compatibility_date = "2026-10-27"
+keep_vars = true          # 画面で入れた GH_REPO を消さない
+preview_urls = false     # 試し用の別URLは使わない
+
+[triggers]
+crons = ["47 * * * *"]    # 毎時47分に上げ直しの確認（retry.yml）を起動
+
+[observability]
+enabled = true            # 実行ログを Cloudflare に残す（Mac がスリープしていても後から見られる）

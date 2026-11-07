@@ -1,0 +1,126 @@
+name: rethumb
+
+# サムネを作り直す（左上のゲーム名を直すときなど）。動画は作らない。
+# 上がる前の動画はドライブの thumbs/ を差し替え、上がった後の動画（youtube_ids）は YouTube のサムネも差し替える。
+on:
+  workflow_dispatch:
+    inputs:
+      vod_id:
+        description: "元配信の VOD ID"
+        required: true
+      files:
+        description: "動画のファイル名（カンマ区切り。例 topic_05.mp4,topic_06.mp4）"
+        required: true
+      label:
+        description: "左上に出すゲーム名（例 ALGS）"
+        required: true
+      subs:
+        description: "日本語字幕付きの動画なら true（サムネ右上に札を入れ、上がった後ならタイトルの先頭に【日本語字幕付き】）"
+        required: false
+        default: ""
+      texts:
+        description: "サムネの言葉を変えるなら、files と同じ順に「|」区切り（変えない分は -）"
+        required: false
+        default: ""
+      youtube_ids:
+        description: "上がった後なら、files と同じ順に YouTube の動画ID（上がる前の分は -）"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+env:
+  TOOL_RCLONE_VERSION: "v1.75.2"
+
+jobs:
+  rethumb:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: ツールを入れる
+        run: |
+          for i in 1 2 3; do timeout 180 sudo apt-get update -q -o Acquire::Retries=3 -o Acquire::http::Timeout=20 && break; echo "apt-get update をやり直し（$i）"; sleep 10; done
+          timeout 600 sudo apt-get install -y -q -o Acquire::Retries=3 ffmpeg fonts-noto-cjk fonts-noto-cjk-extra
+          curl -fsSL -o /tmp/rclone.deb \
+            "https://github.com/rclone/rclone/releases/download/${TOOL_RCLONE_VERSION}/rclone-${TOOL_RCLONE_VERSION}-linux-amd64.deb"
+          sudo dpkg -i /tmp/rclone.deb
+          pip install -q -r requirements.txt -r requirements-thumb.txt -e .
+      - name: 顔切り抜きモデルのキャッシュ
+        uses: actions/cache@v4
+        with:
+          path: ~/.u2net
+          key: rembg-u2net-human-seg-v1
+      - name: rclone の設定
+        env:
+          RCLONE_CONFIG_TEXT: ${{ secrets.RCLONE_CONFIG }}
+        run: |
+          mkdir -p ~/.config/rclone
+          printf '%s\n' "$RCLONE_CONFIG_TEXT" > ~/.config/rclone/rclone.conf
+          chmod 600 ~/.config/rclone/rclone.conf
+      - name: サムネを作り直す
+        env:
+          VOD_ID: ${{ inputs.vod_id }}
+          FILES: ${{ inputs.files }}
+          LABEL: ${{ inputs.label }}
+          YOUTUBE_IDS: ${{ inputs.youtube_ids }}
+          TEXTS: ${{ inputs.texts }}
+          SUBS: ${{ inputs.subs }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from kirinuki import pipeline2, publish_drive, state, subs, thumb2
+          from kirinuki import publish_youtube as yt
+          from kirinuki.config import load_config
+          from kirinuki.fetch import fetch_segment
+          vod, label = os.environ["VOD_ID"], os.environ["LABEL"]
+          files = [f.strip() for f in os.environ["FILES"].split(",") if f.strip()]
+          ids = [x.strip() for x in os.environ["YOUTUBE_IDS"].split(",")] if os.environ["YOUTUBE_IDS"] else []
+          texts = [x.strip() for x in os.environ["TEXTS"].split("|")] if os.environ["TEXTS"] else []
+          badge = subs.THUMB_BADGE if os.environ.get("SUBS") == "true" else ""
+          cfg = load_config()
+          folder, base = state.load()[vod]["drive_folder"], Path("work")
+          publish_drive.download(folder, ["metadata.json"], base, cfg.drive)
+          meta = json.loads((base / "metadata.json").read_text(encoding="utf-8"))
+          by_id = {t["topic_id"]: t for t in meta.get("topics", [])}
+          by_id.update({int(it["id"][6:]): it["video"] for it in meta.get("items", []) if it.get("kind") == "topic"})
+          token = None
+          out = base / "out"
+          for k, f in enumerate(files):
+              v = pipeline2.topic_from(by_id[int(Path(f).stem[6:])])
+              seg = fetch_segment(vod, max(0, v.thumb_sec - 7), v.thumb_sec + 5, base / "seg", Path(f).stem)
+              jpg = out / "thumbs" / f"{Path(f).stem}.jpg"
+              text = texts[k] if k < len(texts) and texts[k] not in ("", "-") else v.thumb_text
+              ok = thumb2.render(seg, v.thumb_sec, text, label, v.face, (), jpg, v.thumb_emph, badge)
+              print(f"== {f}：「{text}」左上「{label}」（顔の切り抜き {'成功' if ok else 'なし'}）")
+              vid = ids[k] if k < len(ids) else "-"
+              if vid and vid != "-":
+                  token = token or yt.access_token(yt.Credentials.from_env())
+                  yt.set_thumbnail(token, vid, jpg)
+                  print(f"== YouTube {vid} のサムネを差し替えた")
+                  if badge:
+                      old = yt.get_title(token, vid)
+                      new = subs.mark_title(old.replace(subs.TITLE_MARK, ""), subs.MIN_LINES_FOR_TITLE)
+                      if new != old:
+                          yt.set_title(token, vid, new)
+                          print(f"== YouTube {vid} のタイトルを「{new}」に変えた")
+          publish_drive.upload(out, folder, cfg.drive)
+          print("== ドライブの thumbs/ を差し替えた")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thumbs
+          path: work/out/thumbs/*.jpg
+          retention-days: 3
+      - name: 後片付け
+        if: always()
+        run: rm -rf work ~/.config/rclone/rclone.conf

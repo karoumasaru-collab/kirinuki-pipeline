@@ -1,0 +1,31 @@
+name: playlist-add
+
+# 上げ済みの動画を、あとからゲームごとの再生リストに入れる（アップロードはしない）
+on:
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: "動画ID=ゲーム名 をカンマ区切り"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  add:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt -e .
+      - name: 再生リストに入れる
+        env:
+          PAIRS: ${{ inputs.pairs }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -m kirinuki playlist-add --pairs "$PAIRS"

@@ -1,0 +1,52 @@
+name: eventsub
+
+# 配信終了の即時通知（Twitch EventSub）の購読を登録・確認する。手動でたまに実行する。
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "subscribe（登録し直す）／status（状態を見る）／test（テスト通知を送って GitHub の処理が起動するか確かめる）"
+        type: choice
+        options: [status, subscribe, test, archives]
+        default: status
+      callback:
+        description: "通知先（Cloudflare Workers のURL）"
+        required: false
+        default: "https://kirinuki-notify.karoumasaru.workers.dev/"
+
+permissions:
+  contents: read
+
+jobs:
+  eventsub:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 実行
+        env:
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          TWITCH_EVENTSUB_SECRET: ${{ secrets.TWITCH_EVENTSUB_SECRET }}
+          ACTION: ${{ inputs.action }}
+          CALLBACK: ${{ inputs.callback }}
+        run: |
+          pip install -q PyYAML==6.0.2
+          cd src && python - <<'EOF'
+          import os
+          from kirinuki import eventsub
+          from kirinuki.config import load_config
+          login = load_config().channel_login
+          if os.environ["ACTION"] == "subscribe":
+              eventsub.subscribe(login, os.environ["CALLBACK"])
+          if os.environ["ACTION"] == "test":
+              eventsub.send_test(os.environ["CALLBACK"])
+          elif os.environ["ACTION"] == "archives":
+              eventsub.archives(login)
+          else:
+              import time; time.sleep(5)
+              eventsub.status(login)
+          EOF
